@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import WeatherCard from './components/WeatherCard';
+import './index.css'; 
 
 function App() {
+  const [city, setCity] = useState('London');
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="flex flex-col items-center justify-center min-h-screen bg-blue-200">
+      <h1 className="text-4xl font-bold mb-6">Weather App</h1>
+      <div className="mb-4">
+        <input
+          type="text"
+          value={city}
+          onChange={(e) => setCity(e.target.value)}
+          className="px-4 py-2 border rounded-lg text-lg"
+          placeholder="Enter City"
+        />
+      </div>
+      <WeatherCard city={city} />
     </div>
   );
 }
