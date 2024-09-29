@@ -5,7 +5,7 @@ function WeatherCard({ city }) {
   const [weather, setWeather] = useState(null);
   const [error, setError] = useState(null);
 
-  const apiKey = 33b7851d1ea2a5078524f3f17d6999df;
+  const apiKey = '33b7851d1ea2a5078524f3f17d6999df';
 
   useEffect(() => {
     const fetchWeather = async () => {
