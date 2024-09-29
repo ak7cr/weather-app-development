@@ -3,7 +3,7 @@ import WeatherCard from './components/WeatherCard';
 import './index.css'; 
 
 function App() {
-  const [city, setCity] = useState('London');
+  const [city, setCity] = useState('Chennai');
   
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-blue-200">
